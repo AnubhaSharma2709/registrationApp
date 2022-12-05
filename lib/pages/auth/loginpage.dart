@@ -43,7 +43,7 @@ class _LoginScreenState extends State<LoginScreen> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
                 Image.network('https://www.brevistay.com/images/Group9473.png'),
-                SizedBox(height:15),
+                SizedBox(height:35),
                 Text(
                   "Student Portal App",
                   style: TextStyle(
@@ -52,7 +52,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     color: Colors.deepPurple[800],
                   ),
                 ),
-                SizedBox(height: 10),
+                SizedBox(height: 5),
                 Text(
                   "Student Login",
                   style: TextStyle(
@@ -62,7 +62,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
                 //Image.asset("assets/login.jpg"),
-                const SizedBox(height: 15),
+                const SizedBox(height: 20),
                 TextFormField(
                   decoration: textInputDecoration.copyWith(
                     labelText: " College Email",

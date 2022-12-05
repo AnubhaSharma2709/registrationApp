@@ -39,53 +39,55 @@ class _HomeScreenState extends State<HomeScreen> {
         appBar: AppBar(
           backgroundColor: Colors.deepPurple[400],
           ),
-        body: Container(
-          padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 170),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text("Welcome Students",
-                style: TextStyle(
-                  color: Colors.deepPurple[800],
-                  fontSize: 30,
-                  fontWeight: FontWeight.bold,
-                ),),
-              Text("To Student Portal App",
-                style: TextStyle(
-                  color: Colors.deepPurple[600],
-                  fontSize: 27,
-                  fontWeight: FontWeight.bold,
-                ),),
-              Icon(
-                Icons.account_circle_rounded,
-                size: 100,
-                color: Colors.deepPurple,
-              ),
-              const SizedBox(
-                height: 15,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  const Text("Full Name", style: TextStyle(fontSize: 17,
-                  color: Colors.deepPurpleAccent,
-                  fontWeight: FontWeight.w500)),
-                  Text(userName, style: const TextStyle(fontSize: 15)),
-                ],
-              ),
-              const Divider(
-                height: 20,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  const Text("Email", style: TextStyle(fontSize: 17,
-                  color: Colors.deepPurpleAccent,
-                  fontWeight: FontWeight.w500)),
-                  Text(email, style: const TextStyle(fontSize: 15),),
-                ],
-              ),
-            ],
+        body: SingleChildScrollView(
+          child: Container(
+            padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 170),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text("Welcome Students",
+                  style: TextStyle(
+                    color: Colors.deepPurple[800],
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold,
+                  ),),
+                Text("To Student Portal App",
+                  style: TextStyle(
+                    color: Colors.deepPurple[600],
+                    fontSize: 27,
+                    fontWeight: FontWeight.bold,
+                  ),),
+                Icon(
+                  Icons.account_circle_rounded,
+                  size: 100,
+                  color: Colors.deepPurple,
+                ),
+                const SizedBox(
+                  height: 15,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    const Text("Full Name", style: TextStyle(fontSize: 17,
+                    color: Colors.deepPurpleAccent,
+                    fontWeight: FontWeight.w500)),
+                    Text(userName, style: const TextStyle(fontSize: 15)),
+                  ],
+                ),
+                const Divider(
+                  height: 20,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    const Text("Email", style: TextStyle(fontSize: 17,
+                    color: Colors.deepPurpleAccent,
+                    fontWeight: FontWeight.w500)),
+                    Text(email, style: const TextStyle(fontSize: 15),),
+                  ],
+                ),
+              ],
+            ),
           ),
         ),
       drawer: Drawer(
