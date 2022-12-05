@@ -7,7 +7,7 @@ const textInputDecoration = InputDecoration(
   ),
   focusedBorder: OutlineInputBorder(
     borderSide: BorderSide(
-      color: Colors.blueAccent,
+      color: Colors.deepPurpleAccent,
       width: 2,
     ),
   ),

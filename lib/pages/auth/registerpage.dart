@@ -20,10 +20,13 @@ class _RegisterScreenState extends State<RegisterScreen> {
   String email = "";
   String password = "";
   String fullName = "";
+  String rollNo = "";
+  String phoneNo = "";
   AuthService authService = AuthService();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.deepPurple[50],
       body: _isLoading ? Center(
         child: CircularProgressIndicator(
           color: Colors.deepPurple,
@@ -40,19 +43,22 @@ class _RegisterScreenState extends State<RegisterScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
+                //Image.network('https://www.mysticalrose.lk/assets/img/login.png'),
                 Text(
-                  "Registration App",
+                  "Student Registration",
                   style: TextStyle(
-                    fontSize: 40,
+                    fontSize: 30,
                     fontWeight: FontWeight.bold,
+                    color: Colors.deepPurple[800],
                   ),
                 ),
                 SizedBox(height: 15),
                 Text(
-                  "Build by Anubha Sharma \n Fourth Project of CSI",
+                  "Please fill the details given below",
                   style: TextStyle(
-                    fontSize: 10,
+                    fontSize: 15,
                     fontWeight: FontWeight.bold,
+                    color: Colors.red[700],
                   ),
                 ),
                 //Image.asset("assets/login.jpg"),
@@ -101,7 +107,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 ),
                 const SizedBox(height: 15),
                 TextFormField(
-                  obscureText: true,
                   decoration: textInputDecoration.copyWith(
                     labelText: "Enter your Password",
                     prefixIcon: Icon(Icons.lock, color: Colors.deepPurple),
@@ -184,7 +189,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                nextScreenReplace(context, const HomeScreen());
              }
              else{
-               showSnackBar(context, Colors.red, value);
+               showSnackBar(context, Colors.deepPurple, value);
                setState(() {
                  _isLoading = false;
                });

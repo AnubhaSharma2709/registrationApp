@@ -25,6 +25,7 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.deepPurple[50],
       body: _isLoading ? Center(
         child: CircularProgressIndicator(
           color: Colors.deepPurple,
@@ -41,19 +42,23 @@ class _LoginScreenState extends State<LoginScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
+                Image.network('https://www.brevistay.com/images/Group9473.png'),
+                SizedBox(height:15),
                 Text(
-                  "Registration App",
+                  "Student Portal App",
                   style: TextStyle(
-                    fontSize: 40,
+                    fontSize: 37,
                     fontWeight: FontWeight.bold,
+                    color: Colors.deepPurple[800],
                   ),
                 ),
-                SizedBox(height: 15),
+                SizedBox(height: 10),
                 Text(
-                  "Build by Anubha Sharma \n Fourth Project of CSI",
+                  "Student Login",
                   style: TextStyle(
-                    fontSize: 10,
+                    fontSize: 30,
                     fontWeight: FontWeight.bold,
+                    color: Colors.deepPurple[700],
                   ),
                 ),
                 //Image.asset("assets/login.jpg"),
@@ -170,7 +175,7 @@ class _LoginScreenState extends State<LoginScreen> {
            nextScreenReplace(context, const HomeScreen());
         }
         else{
-          showSnackBar(context, Colors.red, value);
+          showSnackBar(context, Colors.deepPurple, value);
           setState(() {
             _isLoading = false;
           });

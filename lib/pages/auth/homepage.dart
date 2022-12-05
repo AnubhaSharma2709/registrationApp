@@ -35,25 +35,31 @@ class _HomeScreenState extends State<HomeScreen> {
     @override
     Widget build(BuildContext context) {
       return Scaffold(
+        backgroundColor: Colors.deepPurple[50],
         appBar: AppBar(
-          backgroundColor: Colors.deepPurple,
-          title: const Text(
-            "HomePage",
-              style: TextStyle(
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
-                fontSize: 24,
-              ),),
+          backgroundColor: Colors.deepPurple[400],
           ),
         body: Container(
-          padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 170),
+          padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 170),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
+              Text("Welcome Students",
+                style: TextStyle(
+                  color: Colors.deepPurple[800],
+                  fontSize: 30,
+                  fontWeight: FontWeight.bold,
+                ),),
+              Text("To Student Portal App",
+                style: TextStyle(
+                  color: Colors.deepPurple[600],
+                  fontSize: 27,
+                  fontWeight: FontWeight.bold,
+                ),),
               Icon(
-                Icons.person,
+                Icons.account_circle_rounded,
                 size: 100,
-                color: Colors.deepPurpleAccent,
+                color: Colors.deepPurple,
               ),
               const SizedBox(
                 height: 15,
@@ -89,13 +95,21 @@ class _HomeScreenState extends State<HomeScreen> {
               Icon(
                 Icons.account_circle,
                 size: 150,
-                color: Colors.grey[700],
+                color: Colors.deepPurple[600],
               ),
               const SizedBox(
                 height: 15,
               ),
               Text(
                 userName,
+                textAlign: TextAlign.center,
+                style: const TextStyle(fontWeight: FontWeight.bold),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              Text(
+                email,
                 textAlign: TextAlign.center,
                 style: const TextStyle(fontWeight: FontWeight.bold),
               ),
